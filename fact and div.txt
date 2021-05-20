@@ -1,0 +1,46 @@
+//this is a menu driven program created by ishmeet singh
+#include<stdio.h>
+#include<stdlib.h>
+int divisor()
+{  int a;
+     printf("enter the no whose divisor you want");
+scanf("%d",&a);
+  
+     for(int b=1;b<=a;b++)
+    {    int d;
+    d=a%b;
+if (d==0)
+        {   
+    printf("divisor  %d ",b);
+     printf("\n");  
+        }
+    }
+return 0;
+}
+int fact()
+{ int a,k=1;
+    printf("enter the no whose factorial you want");
+scanf("%d",&a);
+for(int i=1;i<=a;i++)
+ { 
+k=k*i; 
+ }
+printf("factorial is %d", k);
+return 0;
+}
+int main()
+ {  system("CLS");
+char ch;
+ printf("enter what do you want to do  factorial F or divisor D ");
+scanf("%c",&ch);
+switch (ch)
+{
+case 'D': divisor();
+         break;
+case 'F':  fact();
+         break;
+
+default: printf("wrong option ");
+    break;
+}
+ return 0;}
