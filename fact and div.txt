@@ -1,9 +1,11 @@
 //this is a menu driven program created by ishmeet singh
 #include<stdio.h>
 #include<stdlib.h>
-int divisor()
+#include<ctype.h>
+
+void divisor()
 {  int a;
-     printf("enter the no whose divisor you want");
+     printf("enter the no whose divisor you want  ");
 scanf("%d",&a);
   
      for(int b=1;b<=a;b++)
@@ -11,36 +13,56 @@ scanf("%d",&a);
     d=a%b;
 if (d==0)
         {   
-    printf("divisor  %d ",b);
+    printf("divisor  %d\n ",b);
      printf("\n");  
         }
     }
-return 0;
+
 }
-int fact()
+void fact()
 { int a,k=1;
-    printf("enter the no whose factorial you want");
+    printf("enter the no whose factorial you want  ");
 scanf("%d",&a);
 for(int i=1;i<=a;i++)
  { 
 k=k*i; 
  }
-printf("factorial is %d", k);
-return 0;
+printf("factorial is %d\n", k);
+
 }
-int main()
- {  system("CLS");
-char ch;
- printf("enter what do you want to do  factorial F or divisor D ");
-scanf("%c",&ch);
-switch (ch)
+
+ int main()
+ { system("CLS");
+      
+      int i,ch;
+           
+    
+ 
+ do 
+ { 
+
+printf("enter what do you want to do  factorial 2 or divisor 1 ");
+scanf("%d",&ch);
+     switch (ch)
 {
-case 'D': divisor();
+case  1: divisor();
          break;
-case 'F':  fact();
+case  2:  fact();
          break;
 
-default: printf("wrong option ");
-    break;
-}
- return 0;}
+default: printf("wrong option \n");
+     break;
+}  
+printf("to continue type 0  or exit with any no  ");
+
+scanf("%d",&i);
+
+
+
+}while (i==0);
+
+
+
+
+ return 0; 
+ }
