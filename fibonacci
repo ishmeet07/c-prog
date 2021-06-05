@@ -1,0 +1,32 @@
+//this prints fibonacci series and is made by ishmeet singh
+#include<stdio.h>
+#include<stdlib.h>
+int s=0,b=1,k,l;
+int fib( int a)
+
+{if(a>=2)
+ { 
+    k=s+b;
+     printf("-%d", k);
+    
+   s=b;
+   
+   b=k;
+    
+    
+ return fib(a-1);}
+ else
+{
+  printf(" <---this is fibonacci series upto");
+return l;
+  
+}
+  
+}
+void main()
+{ system("CLS");
+   printf("enter the no upto which fibonacci you want to see");
+scanf("%d",&l);
+  printf("->%d-%d",s, b);
+  printf ( "%d",fib(l));
+}
