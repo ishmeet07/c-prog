@@ -10,11 +10,11 @@ int hanoi(int a,char b, char c, char d)
    return 0;
  
   }
-  hanoi(a-1,b,c,d);
-   printf("move disc %d from %c to %c\n",a,b,d);
+  hanoi(a-1,b,d,c);
+   printf("move disc %d from %c to %c\n",a,b,c);
     
   
- hanoi(a-1,c,d,b);
+ hanoi(a-1,d,c,b);
  }
 
 void main()
@@ -23,5 +23,5 @@ int n;
 printf("enter the no of disks you want in your in hanoi tower");
 
 scanf("%d",&n); 
-    hanoi(n,'A','B','C');
+    hanoi(n,'A','C','B');
 }
